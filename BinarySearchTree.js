@@ -275,7 +275,7 @@ Node.prototype.height = function(root) {
  */
 Node.prototype.preOrder = function(rootTree) {
 	if (rootTree === null) {
-		return result;
+		return;
 	}
 	console.log(rootTree.getData());
 	this.preOrder(rootTree.getLeft());
@@ -290,14 +290,14 @@ Node.prototype.postOrder = function(rootTree) {
 	}
 	this.postOrder(rootTree.getRight());
 	this.postOrder(rootTree.getLeft());
-	result += rootTree.getData();
+	console.log(rootTree.getData());
 };
 /**
  * in order traversal
  */
 Node.prototype.inOrder = function(rootTree) {
 	if (rootTree === null) {
-		return "";
+		return;
 	}
 	this.inOrder(rootTree.getLeft());
 	console.log(rootTree.getData() + '\n');
